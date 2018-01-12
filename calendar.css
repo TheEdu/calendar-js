@@ -1,0 +1,132 @@
+body {background-color: #da7c7c;}
+
+.calendar-main{
+	width: 290px;
+	box-shadow:  7px 7px 5px #6b6666;
+	font-family: 'Helvetica Neue', 'Helvetica';
+	margin: auto;
+	margin-top: 100px;
+}
+
+.flex-column{
+	display: flex;
+	flex-direction: column;
+  	flex-wrap: nowrap;
+}
+
+.flex-row{
+	display: flex;
+	flex-direction: row;
+  	flex-wrap: nowrap;
+}
+
+.calendar-dates>div>div{
+	font-size: 10px;
+	font-weight: bold;
+	height: 27px;
+	padding: 2px 3px 2px 2px;
+    background: linear-gradient(#ffffff, #f1f1f1);
+    border-bottom: 1px solid #bbbbbb ;
+    border-left: 1px solid #bbbbbb ;
+    border-top: 1px solid transparent;
+	border-right: 1px solid transparent;
+    position: relative;
+}
+
+.calendar-dates-names{
+	font-size: 11px;
+	font-weight: bold;
+	color: #dadada;
+	height: 25px;
+	background: linear-gradient(#222222, #2d2b2b);
+}
+
+.holiday-info{
+	font-size: 9px;
+	padding: 4px 4px;
+	color: #dadada;
+	background: linear-gradient(#222222, #2d2b2b);
+}
+
+
+.calendar-nav{
+	font-size: 14px;
+	font-weight: bold;
+	height: 35px;
+	background: linear-gradient(#6d6969, #212121);
+	border-radius: 3px 3px 0 0;
+    border: 1px solid black;
+    color: #f5f2f2;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.9);
+    padding: 5px;
+    line-height: 25px;
+    height: 25px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.calendar-dates-names>div,.calendar-nav>div,.calendar-dates>div>div,.holiday-info{
+	flex:1 0;
+	display: flex;
+	justify-content: center; /* align horizontal */
+	align-items: center; /* align vertical */
+}
+
+.arrow{
+	font-size: 20px;
+	font-weight: bolder;
+	flex: 0 0 50px !important;
+}
+
+.arrow>a{
+	color: #f5f2f2;
+	text-decoration: none;
+}
+
+.today{
+	border: 1px solid #bbbbbb !important;
+	box-shadow: 0 0 13px teal inset;
+}
+
+.holiday::after{
+    content: '';
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    background: #da7c7c;
+}
+
+.not-in-month{
+	color: darkgrey;
+	font-weight: normal;
+}
+
+
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #212121;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
