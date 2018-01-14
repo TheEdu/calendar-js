@@ -204,8 +204,3 @@ function showCalendar() {
   document.getElementById("loader").style.display = "none";
   document.getElementById("calendar").style.display = "block";
 }
-
-function showLoader() {
-  document.getElementById("calendar").style.display = "none";
-  document.getElementById("loader").style.display = "block";
-}

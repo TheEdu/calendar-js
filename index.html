@@ -2,57 +2,56 @@
 <html>
 <head>
 	<title> Calendar </title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script type="text/javascript" src="calendar.js"></script>
 	<link rel="stylesheet" href="calendar.css">
 </head>
 <body>
+	<div class="flex-column">
+		<div id="loader"></div>
 
-	<div id="loader"></div>
+		<div id="calendar" class="flex-column calendar-main" style="display:none;">
 
-	<div id="calendar" class="flex-column calendar-main" style="display:none;">
-
-		<div id="calendar-nav-section" class="flex-row calendar-nav">
-			<div  class="arrow">
-				<a href="#" onclick="prevMonth()">«</a>
+			<div id="calendar-nav-section" class="flex-row calendar-nav">
+				<div  class="arrow">
+					<a href="#" onclick="prevMonth()">«</a>
+				</div>
+				<div id="monthAndYear"></div>
+				<div class="arrow">
+					<a href="#" onclick="nextMonth()">»</a>
+				</div>
 			</div>
-			<div id="monthAndYear"></div>
-			<div class="arrow">
-				<a href="#" onclick="nextMonth()">»</a>
+
+			<div id="calendar-dates-names-section">
+				<div id="dates-names" class="flex-row calendar-dates-names">
+					<div>D</div>
+					<div>L</div>
+					<div>M</div>
+					<div>X</div>
+					<div>J</div>
+					<div>V</div>
+					<div>S</div>
+				</div>
+			</div>
+
+			<div id="calendar-dates-section" class="flex-column calendar-dates">
+				<div id="dates-row-0" class="flex-row"></div>
+				<div id="dates-row-1" class="flex-row"></div>
+				<div id="dates-row-2" class="flex-row"></div>
+				<div id="dates-row-3" class="flex-row"></div>
+				<div id="dates-row-4" class="flex-row"></div>
+				<div id="dates-row-5" class="flex-row"></div>
+			</div>
+
+
+			<div id="calendar-holidays-info-section">
+				<div id="holidays-info" class="holiday-info flex-column">
+				</div>
 			</div>
 		</div>
-
-		<div id="calendar-dates-names-section">
-			<div id="dates-names" class="flex-row calendar-dates-names">
-				<div>D</div>
-				<div>L</div>
-				<div>M</div>
-				<div>X</div>
-				<div>J</div>
-				<div>V</div>
-				<div>S</div>
-			</div>
-		</div>
-
-		<div id="calendar-dates-section" class="flex-column calendar-dates">
-			<div id="dates-row-0" class="flex-row"></div>
-			<div id="dates-row-1" class="flex-row"></div>
-			<div id="dates-row-2" class="flex-row"></div>
-			<div id="dates-row-3" class="flex-row"></div>
-			<div id="dates-row-4" class="flex-row"></div>
-			<div id="dates-row-5" class="flex-row"></div>
-		</div>
-
-
-		<div id="calendar-holidays-info-section">
-			<div id="holidays-info" class="holiday-info flex-column">
-			</div>
-		</div>
-
-
-
 	</div>
 
-	<div id="demo"></div>
 
 <script>
 
